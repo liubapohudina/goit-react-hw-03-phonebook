@@ -25,7 +25,7 @@ export class App extends Component {
 
   componentDidMount() {
     const dataContacts = JSON.parse(localStorage.getItem('contacts'))
-    if (dataContacts.length !== 0) {
+    if (dataContacts && dataContacts.length) {
       this.setState({
         contacts: dataContacts,
       })
